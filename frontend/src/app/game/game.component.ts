@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameActions } from './gameActions';
 
 @Component({
   selector: 'app-game',
@@ -9,7 +10,14 @@ export class GameComponent implements OnInit {
 
   constructor() { }
 
+  playerAction: GameActions; 
+  computerAction: GameActions;
+
   ngOnInit() {
+  }
+
+  selectPlayerAction = (action) => {
+    this.playerAction = action;
   }
 
 }
