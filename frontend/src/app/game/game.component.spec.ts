@@ -32,7 +32,13 @@ describe('GameComponent', () => {
       expect(component.playerAction).toBe(GameActions.ROCK);
     });
 
-    
+    it('should update player action to PAPER', () => {
+      // act
+      component.selectPlayerAction(GameActions.PAPER);
+      // assert
+      expect(component.playerAction).toBe(GameActions.PAPER);
+    });
+
   });
   
 });
