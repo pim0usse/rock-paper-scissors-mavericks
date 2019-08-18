@@ -39,6 +39,13 @@ describe('GameComponent', () => {
       expect(component.playerAction).toBe(GameActions.PAPER);
     });
 
+    it('should update player action to SCISSORS', () => {
+      // act
+      component.selectPlayerAction(GameActions.SCISSORS);
+      // assert
+      expect(component.playerAction).toBe(GameActions.SCISSORS);
+    });
+
   });
   
 });
