@@ -26,8 +26,9 @@ describe('GameComponent', () => {
 
   describe('userAction', () => {
     it('should update player action to ROCK', () => {
+      const selectedAction: GameActions = GameActions.ROCK;
       // act
-      component.selectPlayerAction(GameActions.ROCK);
+      component.selectPlayerAction(selectedAction);
       // assert
       expect(component.playerAction).toBe(GameActions.ROCK);
     });
@@ -44,6 +45,16 @@ describe('GameComponent', () => {
       component.selectPlayerAction(GameActions.SCISSORS);
       // assert
       expect(component.playerAction).toBe(GameActions.SCISSORS);
+    });
+
+    it('should not update player action when invalid action', () => {
+      // arrange
+      component.playerAction = GameActions.ROCK;
+      const invalidAction = undefined;
+      // act
+      component.selectPlayerAction(invalidAction);
+      // assert
+      expect(component.playerAction).toBe(GameActions.ROCK);
     });
 
   });

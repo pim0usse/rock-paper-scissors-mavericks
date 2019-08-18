@@ -10,14 +10,16 @@ export class GameComponent implements OnInit {
 
   constructor() { }
 
-  playerAction: GameActions; 
+  playerAction: GameActions;
   computerAction: GameActions;
 
   ngOnInit() {
   }
 
-  selectPlayerAction = (action) => {
-    this.playerAction = action;
+  selectPlayerAction = (action: GameActions) => {
+    if (action in GameActions){
+      this.playerAction = action;
+    }
   }
 
 }
