@@ -1,16 +1,16 @@
 <div class="row">
-  <p>Choose your move</p>
+  <h3>Choose your move</h3>
   <p [hidden]="playerAction == null">move selected : {{playerAction}}</p>
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <input class=".button-rock" (click)="selectPlayerAction(gameActions.ROCK)" type="image"
         src="../../assets/img/rock.png" />
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
       <input class=".button-paper" (click)="selectPlayerAction(gameActions.PAPER)" type="image"
         src="../../assets/img/paper.png" />
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
       <input class=".button-scissors" (click)="selectPlayerAction(gameActions.SCISSORS)" type="image"
         src="../../assets/img/scissors.png" />
     </div>
