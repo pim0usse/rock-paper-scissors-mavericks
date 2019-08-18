@@ -8,15 +8,23 @@ import { GameActions } from './gameActions';
 })
 export class GameActionComponent implements OnInit {
 
-  constructor() { }
+  gameActions: typeof GameActions;
+
+  constructor() { 
+    this.gameActions = GameActions;
+  }
+
+
 
   playerAction: GameActions;
   computerAction: GameActions;
 
   ngOnInit() {
+   
   }
 
-  selectPlayerAction = (action: GameActions) => {
+  selectPlayerAction = (action) => {
+    console.log(action);
     if (action in GameActions){
       this.playerAction = action;
     }

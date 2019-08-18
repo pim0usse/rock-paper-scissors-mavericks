@@ -1,14 +1,15 @@
 <div class="row">
     <p>Choose your move</p>
+    <p [hidden]="playerAction == null">move selected : {{playerAction}}</p>
     <div class="row">
       <div class="col-md-3">
-        <button class=".button-rock" (click)="selectPlayerAction(GameActions.ROCK)">ROCK</button>
+        <button class=".button-rock" (click)="selectPlayerAction(gameActions.ROCK)">ROCK</button>
       </div>
       <div class="col-md-3">
-        <button class=".button-paper" (click)="selectPlayerAction(GameActions.PAPER)">PAPER</button>
+        <button class=".button-paper" (click)="selectPlayerAction(gameActions.PAPER)">PAPER</button>
       </div>
       <div class="col-md-3">
-        <button class=".button-scissors" (click)="selectPlayerAction(GameActions.SCISSORS)">SCISSORS</button>
+        <button class=".button-scissors" (click)="selectPlayerAction(gameActions.SCISSORS)">SCISSORS</button>
       </div>
     </div>
   </div>
