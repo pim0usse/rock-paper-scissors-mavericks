@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
 import { GameActionComponent } from './game-action/game-action.component';
+import { GameTimerComponent } from './game-timer/game-timer.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -13,7 +14,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         GameComponent,
-        GameActionComponent
+        GameActionComponent,
+        GameTimerComponent
       ],
     }).compileComponents();
   }));
