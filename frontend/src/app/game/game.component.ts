@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GameActions } from './gameActions';
+import { GameActionComponent } from '../game-action/game-action.component';
 
 @Component({
   selector: 'app-game',
@@ -7,19 +7,10 @@ import { GameActions } from './gameActions';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-
+  
   constructor() { }
 
-  playerAction: GameActions;
-  computerAction: GameActions;
-
   ngOnInit() {
-  }
-
-  selectPlayerAction = (action: GameActions) => {
-    if (action in GameActions){
-      this.playerAction = action;
-    }
   }
 
 }
